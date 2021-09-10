@@ -1,5 +1,5 @@
 # Instagram
-#### A website cloneofinstagram app
+#### A website clone of instagram app
 #### By MAXMILLAN KUYA
 ## Description
 A website clone of instagram  where a user can create an account and sign in. It also has uploading of images,liking and commenting.
@@ -15,21 +15,22 @@ Requirements
 
 * Navigate to the project directory
 
-* cd Insagram
+* cd Instagram
 
 2. Create a virtual environment
-* Install Virtualenv pip install virtualenv
+* Install Virtualenv 
+ -pip install virtualenv
 
 * To create a virtual environment named virtual, run virtualenv virtual
 
 * To activate the virtual environment we just created, run source virtual/bin/activate
 
-3. Create a database
+1. Create a database
 You'll need to create a new postgress database, Type the following command to access postgress
 
 $ psql
 
-* Then run the following query to create a new database named gallery
+* Then run the following query to create a new database named instagram
 
 4.create database Galleria
 5.Install dependencies
@@ -39,9 +40,9 @@ $ psql
 6.Create Database migrations
 * Making migrations on postgres using django
 
-* python3 manage.py makemigrations gallery
+* python3 manage.py makemigrations instagram
 
-* then run the command below;
+  - then run the command below;
 
 * python3 manage.py migrate
 
@@ -53,13 +54,9 @@ $ psql
 ### Clone the Repo
 
 Run the command on  terminal:
-`git clone https://github.com/kuya-ui/Instagram.git then cg Instagram`
+`git clone https://github.com/kuya-ui/Instagram.git then cd Instagram`
 
-### Activate virtual environment
 
-Activate virtual environment using python3.6 as the default
-virtualenv virtual
-source venv/bin/activate
 
 ### Install dependencies
 
@@ -112,5 +109,6 @@ No any known bugs
 * kuyamaxmillan@gmail.com
 
 ### License
+* [MIT Licence](https://choosealicense.com/licenses/mit/)
 
-[MIT Licence](https://choosealicense.com/licenses/mit/)
+Copyright (c) 2021 Maxmillan Inc.
