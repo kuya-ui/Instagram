@@ -86,7 +86,7 @@ EMAIL_HOST_PASSWORD = '<your-password>'
 
 python3.6 manage.py makemigrations
 python3.6 manage.py migrate
-```
+
 
 ### Run the app
 
@@ -105,10 +105,8 @@ No any known bugs
     * Heroku
 
 ## Support and contact details
-
 * kuyamaxmillan@gmail.com
-
 ### License
-* [MIT Licence](https://choosealicense.com/licenses/mit/)
+[MIT Licence](https://choosealicense.com/licenses/mit/)
 
 Copyright (c) 2021 Maxmillan Inc.
