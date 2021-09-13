@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.http  import HttpResponse
+from django.http  import HttpResponse,Http404
 
 
 # Create your views here.
-def home(request):
-    return render(request, '')
+# def home(request):
+#     return render(request, '')
 
 # @login_required(login_url='/accounts/login/')
 # def home(request):
