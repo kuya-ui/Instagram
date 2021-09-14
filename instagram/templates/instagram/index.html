@@ -1,10 +1,7 @@
 {% extends 'instagram/base.html' %}
-
 {% block content %}
 <div class="container">
-
     <a href="{%url 'upload'%}" class="btn btn-outline-info btn-sm">Upload</a>
-
 
     {% for image in images %}
     <div class="row">
