@@ -3,6 +3,7 @@ from django.http  import HttpResponse,Http404
 from . forms import ImageUploadForm,ImageProfileForm,CommentForm
 from .models import *
 from django.contrib.auth.decorators import login_required
+from .email import send_welcome_email
 from vote.managers import  VotableManager
 
 votes = VotableManager()
