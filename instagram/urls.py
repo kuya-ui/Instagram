@@ -8,8 +8,8 @@ from django.conf.urls.static import static
 urlpatterns=[
     # url(r'^$',views.home,name = 'home'),
     # url(r'^$',views.index,name = 'timeline'),
-    # url(r'^image/$', views.image_upload,name='upload'),
-    # url(r'^profile/$', views.profile_info,name='profile'),
+    url(r'^image/$', views.image_upload,name='upload'),
+    url(r'^profile/$', views.profile_info,name='profile'),
     # url(r'^edit/$',views.profile_edit,name='edit'),
     # url(r'^new_comment/(\d+)/$' ,views.add_comment,name='newComment'),
     # url(r'^comment/(\d+)/$' ,views.comments,name='comments'),

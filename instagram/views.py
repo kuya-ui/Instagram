@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
-from . forms import ImageUploadForm,ImageProfileForm,CommentForm
+# from . forms import ImageUploadForm,ImageProfileForm,CommentForm
 from .models import *
 from django.contrib.auth.decorators import login_required
-from vote.managers import  VotableManager
+# from vote.managers import  VotableManager
 
 # votes = VotableManager()
 
