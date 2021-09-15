@@ -20,6 +20,17 @@ class Comments(models.Model):
     image = models.ForeignKey(Image,on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)
 
+    @classmethod
+    def get_comments(cls,id):
+        comments = cls.objects.filter(image__id=id)
+        return comments
+
+    def save_comment(self):
+        self.save()
+
+    def __str__(self):
+        return self.comment
+
 class Profile(models.Model):
     profile_photo = models.ImageField(upload_to='images')
     bio = HTMLField()
