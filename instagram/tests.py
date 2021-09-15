@@ -17,7 +17,7 @@ class ImageTestClass(TestCase):
 
     def test_instance(self):
         Image.objects.all().delete()
-        self.assertTrue(isinstance(self.image_one,Image)) 
+        self.assertTrue(isinstance(self.image_one,Image))
 
     def test_save_method(self):
         
