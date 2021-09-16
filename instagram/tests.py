@@ -13,7 +13,7 @@ class ImageTestClass(TestCase):
 
     def setUp(self):
 
-        self.image_one = Image(image='',image_name='', image_caption='',likes=40, id=1,user_id=3)
+        self.image_one = Image(image='images/lagoon.jpeg',image_name='dan', image_caption='lacasa',likes=40, id=1,user_id=3)
 
     def test_instance(self):
         Image.objects.all().delete()

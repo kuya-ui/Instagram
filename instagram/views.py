@@ -3,7 +3,7 @@ from django.http  import HttpResponse,Http404,HttpResponseRedirect
 from . forms import ImageUploadForm,ImageProfileForm,CommentForm
 from .models import *
 from django.contrib.auth.decorators import login_required
-# from .email import send_welcome_email
+from .emails import send_welcome_email
 from vote.managers import  VotableManager
 
 votes = VotableManager()
@@ -98,11 +98,11 @@ def search_user(request):
         search_term = request.GET.get("search_user")
         searched_user = User.objects.filter(username__icontains=search_term)
         message = f"{search_term}"
-        return render(request, 'instagram/search_results.html', {"message": message, "users": searched_user})
+        return render(request, 'instagram/search_result.html', {"message": message, "users": searched_user})
 
     else:
         message = "You haven't searched any term "
-        return render(request, 'instagram/search_results.html', {"message": message})
+        return render(request, 'instagram/search_result.html', {"message": message})
 
 def signup(request):
     name = "Sign Up"
