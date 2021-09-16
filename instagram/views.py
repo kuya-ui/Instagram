@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
-from django.http  import HttpResponse,Http404
+from django.http  import HttpResponse,Http404,HttpResponseRedirect
 from . forms import ImageUploadForm,ImageProfileForm,CommentForm
 from .models import *
 from django.contrib.auth.decorators import login_required
-from .email import send_welcome_email
+# from .email import send_welcome_email
 from vote.managers import  VotableManager
 
 votes = VotableManager()
@@ -104,3 +104,23 @@ def search_user(request):
         message = "You haven't searched any term "
         return render(request, 'instagram/search_results.html', {"message": message})
 
+def signup(request):
+    name = "Sign Up"
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            email = form.cleaned_data.get('email')
+            name = form.cleaned_data.get('username')
+            send_mail(
+            'Welcome to Instagram App.',
+            f'Hello {name},\n '
+            'Welcome to instagram App and have fun exploring',
+            'kuyamaxmillan@gmail.com',
+            [email],
+            fail_silently=False,
+            )
+        return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/registration_form.html', {'form': form, 'name':name})
